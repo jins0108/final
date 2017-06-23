@@ -1,0 +1,289 @@
+#footer {
+	background-color: #262626;
+	height: 260px;
+	color: #ccc;
+	font-size: 14px;
+	text-align: left;
+}
+
+#footer ul {
+	width: 1170px;
+	margin: 0 auto;
+	padding-top: 70px;
+}
+
+#footer ul li {
+	float: left;
+	width: 320px;
+	margin-right: 40px;
+}
+
+#footer ul li .footer_title {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+#footer ul li .footer_contents {
+	line-height: 26px;
+}
+
+li {
+	list-style-type: none;
+}
+
+#sub_banner {
+	width: 100%;
+	position: relative;
+	background: url(resources/images/footer_banner.jpg) no-repeat 50% 0;
+	height: 460px;
+	text-align: center;
+	padding: 25px;
+	background-attachment: fixed;
+}
+
+.sub_banner_text {
+	position: relative;
+	top: 126px;
+	font-size: 24px;
+	color: #fff;
+}
+
+.carousel-inner img {
+	width: 100%; /* Set width to 100% */
+	min-height: 200px;
+}
+
+.devise-wrapper {
+    display: table;
+    width: 100%;
+    min-height: 974px;
+    background-image: url(resources/images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.devise-wrapper .devise-inner {
+    display: table-cell;
+    padding: 3rem;
+    padding-top: 7.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+#join {
+    width: 100%;
+    max-width: 60rem;
+    padding: 3rem;
+}
+.devise-wrapper .devise-inner .devise-form {
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #FFF;
+    box-shadow: 0 0 1px #CCC;
+    box-sizing: border-box;
+}
+.devise-wrapper .devise-inner {
+    display: table-cell;
+    padding: 3rem;
+    padding-top: 7.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input, textarea, button {
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    outline: 0;
+}
+#join .content .devise-title {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+.devise-wrapper .devise-inner .devise-title {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+}
+div {
+    display: block;
+}
+#join .content .login-wrapper .wrap-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+#join .content .login-wrapper.sns-login-wrapper .sns-login-btn.facebook-btn {
+    background-image: url(resources/images/facebook.png);
+}
+#join .content .login-wrapper.sns-login-wrapper .sns-login-btn.naver-btn {
+    background-image: url(resources/images/naver.png);
+}
+#join .content .login-wrapper.sns-login-wrapper .sns-login-btn.kakao-btn {
+    background-image: url(resources/images/kakao.png);
+}
+#join .content .login-wrapper.sns-login-wrapper .sns-login-btn {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+#join .content .login-wrapper.sns-login-wrapper .sns-login-btn:last-child {
+    margin-right: 0;
+}
+.devise-wrapper .devise-inner {
+    display: table-cell;
+    padding: 3rem;
+    padding-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+.col-btn{
+    display: block;
+    width: 26%;
+    height: 30px;
+    padding-left: 3px;
+    background-color: #FD675A;
+    border: 0;
+    border-radius: 0.5rem;
+    color: #FFF;
+    font-size: 1.3rem;
+    text-align: center;
+    float: right;
+}
+input[type="text"], input[type="password"], input[type="email"]{
+	display: block;
+	height: 30px;
+	line-height: 4rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+    background-color: #EEE;
+    border: 0;
+    box-shadow: inset 0 0 0 1px #DDD;
+    box-sizing: border-box; 
+}
+
+#join .content .login-wrapper.email-login-wrapper .text-input {
+    width: 230px;
+    height: 30px;
+}
+#join .content .login-wrapper.email-login-wrapper .addr2 {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+#join .content .login-wrapper.email-login-wrapper .zipcode {
+    display: block;
+    width: 100px;
+    height: 30px;
+
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-input:checked+.gender-btn {
+    background-color: #FD675A;
+    box-shadow: inset 0 0 0 1px #FD675A;
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-btn .btn-content {
+    display: inline-block;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    margin: 1.4rem 0;
+    color: #999;
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-btn {
+    float: left;
+    width: 50%;
+    height: 4rem;
+    background-color: #EEE;
+    box-shadow: inset 0 0 0 1px #DDD;
+    cursor: pointer;
+}
+#join .content .login-wrapper.email-login-wrapper .agreement-list .agreement .agreement-content .content {
+    color: #808080;
+    font-size: 1.1rem;
+    overflow: hidden;
+}
+#join .content {
+    max-width: 36rem;
+    margin: 0 auto;
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-input {
+    display: none;
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-input:checked+.gender-btn .btn-content {
+    color: #FFF;
+    font-weight: 700;
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-btn .btn-content .btn-icon {
+    float: left;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1.8rem;
+    box-shadow: inset 0 0 0 1px #DDD;
+    vertical-align: middle;
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-btn .btn-content .btn-icon .check {
+    visibility: hidden;
+}
+#join .content .login-wrapper.email-login-wrapper .gender-btn-wrapper .gender-input:checked+.gender-btn .btn-content .btn-icon .check {
+    visibility: visible;
+}
+#join .content .login-wrapper.email-login-wrapper .agreement-list .agreement .agreement-content {
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+#join .content .login-wrapper.email-login-wrapper .agreement-list .agreement {
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+}
+#join .content .login-wrapper.email-login-wrapper .agreement-list {
+    padding: 1.5rem 1rem;
+    text-align: left;
+}
+#join .content .login-wrapper.email-login-wrapper .agreement-list .agreement .agreement-content:before {
+    content: '';
+    float: left;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1.2rem;
+    background-color: #FFF;
+    box-shadow: inset 0 0 0 1px #DDD;
+    text-align: center;
+    cursor: pointer;
+}
+#join .content .login-wrapper.email-login-wrapper .agreement-list .agreement .agreement-input:checked+.agreement-content:before {
+    content: '\2713';
+    color: #FD675A;
+    box-shadow: inset 0 0 0 1px #FD675A;
+}
+#join .content .login-wrapper.email-login-wrapper .agreement-list .agreement:last-child .agreement-content {
+    float: left;
+}
+.agreement-input{
+	visibility: hidden;
+}
+#join .content .join-btn {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 2rem;
+    background-color: #FD675A;
+    border: 0;
+    border-radius: 0.5rem;
+    color: #FFF;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+@media ( max-width : 600px) {
+	.carousel-caption {
+		display: none;
+	}
+}

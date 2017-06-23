@@ -1,0 +1,65 @@
+//===파일 업로드
+function imgUpload($tmp, $dir, $maxSize, $allowType, $maxWidth, $maxHeight=2000)
+{
+	if($tmp["size"] > 0)
+	{
+		echo $tmp["size"]."_".$maxSize;
+
+		$fn = sprintf("%s%s",time(), substr(tempnam ("/tmp", ""),5)) ;
+		$ext = getFileExt($tmp['name']);
+		$filename = $fn.".".$ext;
+
+		if($tmp["size"] > $maxSize)
+		{
+			echo("<script>alert('허용된 최대 사이즈를 넘었습니다');</script>");
+			$file["chk"] = false;
+			return $file;
+		}
+
+		if(!in_array($ext, $allowType))
+		{
+			echo("<script>alert('허용된 확장자가 아닙니다.');</script>");
+			$file["chk"] = false;
+			return $file;
+		}
+
+		if(!is_dir($dir))
+		{
+			mkdir($dir,0700);
+			chmod($dir,0707);
+		}
+
+		if(!move_uploaded_file($tmp["tmp_name"], $dir.$filename))
+		{
+			echo("<script>alert('파일이 업로드되지 않았습니다.');</script>");
+			$file["chk"] = false;
+			return $file;
+		}
+
+		$imgSize = @getimagesize($dir."/".$filename);
+		if($imgSize[0] > $maxWidth && $imgSize[1] > $maxHeight)
+		{
+			system("convert ".$dir."/".$filename." -resize ".$maxWidth."x".$maxHeight."  ".$dir."/".$filename) ;
+		}else
+		{
+			if($imgSize[0] > $maxWidth)
+			{
+				system("convert ".$dir."/".$filename." -resize ".$maxWidth."x  ".$dir."/".$filename) ;
+			}
+			if($imgSize[1] > $maxHeight)
+			{
+				system("convert ".$dir."/".$filename." -resize x".$maxHeight." ".$dir."/".$filename) ;
+			}
+		}
+
+		$file["file_name"] = $tmp['name'];
+		$file["file_save"] = $filename;
+		$file["chk"] = true;
+		return $file;
+	}
+	else
+	{
+		$file["chk"] = false;
+		return $file;
+	}
+}

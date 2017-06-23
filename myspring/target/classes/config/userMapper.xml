@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+
+	<select id="idChk" parameterType="string" resultType="int">
+		select
+		count(user_id)
+		from tbl_user_info
+		where user_id=#{user_id}
+
+	</select>
+	<insert id="userJoin" parameterType="dto.UserDTO">
+		insert into
+		tbl_user_info
+		(user_idx, user_id, user_name, user_pwd, addr1, addr2, zipcode, user_email , allow_dm, user_gender)
+		values
+		(tbl_user_info_seq.nextval, #{user_id}, #{user_name}, #{user_pwd} ,#{addr1} ,#{addr2} ,#{zipcode} , #{user_email}, #{allow_dm, jdbcType=CHAR}, #{user_gender})
+	</insert>
+
+
+	<resultMap type="dto.UserDTO" id="userInfo" autoMapping="false" >
+		<result column="user_idx" property="user_idx" />
+		<result column="user_id" property="user_id" />
+		<result column="user_name" property="user_name" />
+		<result column="user_email" property="user_email" />
+	</resultMap>
+	<select id="loginChk" parameterType="java.util.HashMap" resultMap="userInfo">
+		select
+		user_idx,
+		user_id,
+		user_name,
+		user_email
+		from tbl_user_info
+		where user_id = #{user_id}
+		and user_pwd = #{user_pwd}
+		and status = '1'
+	</select>
+
+</mapper>   
+
+
+
+
+
+
+
+
+
+
+
